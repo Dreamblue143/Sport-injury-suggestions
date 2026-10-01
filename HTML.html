@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sports Injury Care</title>
+<link rel="stylesheet" href="CSS.css">
+</head>
+<body>
+<div id="overlay" class="overlay"></div>
+<aside id="sidebar" class="sidebar" aria-label="Menu">
+  <div class="side-head"><span>Menu</span><button id="closeSide" aria-label="Close menu">&times;</button></div>
+  <a href="#/" class="side-link">Home</a>
+  <button class="side-link" id="injToggle">Sports injuries <span>▾</span></button>
+  <div id="sideInjuries" class="side-sub"></div>
+  <button class="side-link" id="aboutToggle">About <span>▾</span></button>
+  <div id="sideAbout" class="side-sub about">
+    <p>An educational site on common sports injuries, their causes, first aid, and the nutraceuticals studied for recovery support.</p>
+    <p>Injury descriptions are summaries of public-domain health information from NIH MedlinePlus (U.S. National Library of Medicine). Each page links to it.</p>
+    <p><em>For awareness only. Not a substitute for professional medical advice.</em></p>
+  </div>
+  <a href="https://medlineplus.gov/" target="_blank" rel="noopener" class="side-link">Help &amp; support (MedlinePlus)</a>
+</aside>
+
+<header class="site-header">
+  <h1>Sports Injury Care</h1>
+  <svg class="ecg" viewBox="0 0 600 40" preserveAspectRatio="none" aria-hidden="true"><path d="M0 20H180l10-14 12 30 12-30 10 14H330l10-8 8 16 8-8H600"/></svg>
+</header>
+<nav class="navbar">
+  <button id="menuBtn" class="burger" aria-label="Open menu"><i></i><i></i><i></i></button>
+  <a href="#/" class="nav-home">Home</a>
+  <div class="search">
+    <input id="search" type="text" placeholder="Search injuries (e.g. ankle, ACL, back)…" autocomplete="off">
+    <div id="suggest" class="suggest" hidden></div>
+  </div>
+</nav>
+
+<main id="home">
+  <section class="hero">
+    <h2>Find the injury. See the science-backed nutrition support.</h2>
+    <p>Pick an injury to get a plain-language description, first aid, and nutraceuticals with their sources, formulations, doses and how to use them safely.</p>
+    <div class="stats"><b id="statInj">0</b> injuries <b id="statNut">0</b> nutraceuticals <b>2</b> public NIH sources</div>
+  </section>
+  <div id="chips" class="chips"></div>
+  <section id="gallery" class="gallery"></section>
+  <p class="note">Educational information only. Supplements can interact with medicines and health conditions. Talk to a doctor or pharmacist before starting any.</p>
+</main>
+
+<article id="view" class="view" hidden></article>
+<footer class="foot">&copy; 2026 Sports Injury Care · Descriptions summarised from NIH MedlinePlus (public domain)</footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
